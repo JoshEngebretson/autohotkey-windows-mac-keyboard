@@ -52,6 +52,7 @@ F19::Run https://facebook.com
 ; --------------------------------------------------------------
 
 ; Make Ctrl + S work with cmd (windows) key
+
 #s::^s
 
 ; Selecting
@@ -78,20 +79,31 @@ F19::Run https://facebook.com
 ; Redo
 #y::^y
 
+; Delete Line
+#d::^d
+
 ; New tab
 #t::^t
 
 ; close tab
 #w::^w
 
+; Reload
+#r::^r
+
 ; Close windows (cmd + q to Alt + F4)
-#q::Send !{F4}
+;#q::Send !{F4}
 
 ; Remap Windows + Tab to Alt + Tab.
 Lwin & Tab::AltTab
 
 ; minimize windows
 #m::WinMinimize,a
+
+;Disable Windows keys
+LWin::
+RWin::
+#::
 
 
 ; --------------------------------------------------------------
@@ -142,18 +154,6 @@ Lwin & Tab::AltTab
 
 ; Map Alt + N to ~
 !n::SendInput {~}
-
-
-; --------------------------------------------------------------
-; Custom mappings for special chars
-; --------------------------------------------------------------
-
-;#ö::SendInput {[} 
-;#ä::SendInput {]} 
-
-;^ö::SendInput {{} 
-;^ä::SendInput {}} 
-
 
 ; --------------------------------------------------------------
 ; Application specific
