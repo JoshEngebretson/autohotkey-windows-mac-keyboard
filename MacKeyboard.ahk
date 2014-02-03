@@ -100,11 +100,11 @@ Lwin & Tab::AltTab
 ; minimize windows
 #m::WinMinimize,a
 
-;Disable Windows keys
-LWin::
-RWin::
-#::
+;Disable Left Windows key
+LWin::^
 
+;Open find in everyware
+#space::#q
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
