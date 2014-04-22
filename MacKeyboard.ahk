@@ -6,6 +6,7 @@
 ; NOTES
 ; --------------------------------------------------------------
 ; ! = ALT
+; <^>! = RIGHT ALT
 ; ^ = CTRL
 ; + = SHIFT
 ; # = WIN
@@ -17,41 +18,27 @@
 SetTitleMatchMode 2
 SendMode Input
 
-
-; --------------------------------------------------------------
-; media/function keys all mapped to the right option key
-; --------------------------------------------------------------
-
-RAlt & F7::SendInput {Media_Prev}
-RAlt & F8::SendInput {Media_Play_Pause}
-RAlt & F9::SendInput {Media_Next}
-F10::SendInput {Volume_Mute}
-F11::SendInput {Volume_Down}
-F12::SendInput {Volume_Up}
-
-; swap left command/windows key with left alt
-;LWin::LAlt
-;LAlt::LWin ; add a semicolon in front of this line if you want to disable the windows key
-
-; Eject Key
-F20::SendInput {Insert}
-
-; F13-15, standard windows mapping
-F13::SendInput {PrintScreen}
-F14::SendInput {ScrollLock}
-F15::SendInput {Pause}
-
-;F16-19 custom app launchers, see http://www.autohotkey.com/docs/Tutorial.htm for usage info
-F16::Run http://twitter.com
-F17::Run http://tumblr.com
-F18::Run http://www.reddit.com
-F19::Run https://facebook.com
-
 ; --------------------------------------------------------------
 ; OS X system shortcuts
 ; --------------------------------------------------------------
 
-; Make Ctrl + S work with cmd (windows) key
+; Close windows (cmd + q to Alt + F4)
+;#q::Send !{F4}
+
+; Remap Windows + Tab to Alt + Tab.
+Lwin & Tab::AltTab
+
+; minimize windows
+#m::WinMinimize,a
+
+;Disable Left Windows key (in cases when only the windows key is pressed without any letter (e.g. c))
+LWin::^
+
+;Open Windows find in everywhere
+#space::#q
+
+
+; Make Ctrl + S (and others) works with cmd key
 
 #s::^s
 
@@ -91,24 +78,36 @@ F19::Run https://facebook.com
 ; Reload
 #r::^r
 
-; Close windows (cmd + q to Alt + F4)
-;#q::Send !{F4}
+; --------------------------------------------------------------
+; OS X keyboard mappings for navigation
+; --------------------------------------------------------------
 
-; Remap Windows + Tab to Alt + Tab.
-Lwin & Tab::AltTab
+; Cmd-backspace to delete the left part of a line
+#BS::Send {LShift down}{Home}{LShift Up}{Del}
 
-; minimize windows
-#m::WinMinimize,a
+; Alt-delete to delete the previous word
+!BS::Send {LShift down}{LCtrl down}{Left}{LShift Up}{Lctrl up}{Del}
 
-;Disable Left Windows key
-LWin::^
+; Skip words
+<!Left::Send {ctrl down}{Left}{ctrl up}
+<!Right::Send {ctrl down}{Right}{ctrl up}
+<!+Left::Send {ctrl down}{shift down}{Left}{shift up}{ctrl up}
+<!+Right::Send {ctrl down}{shift down}{Right}{shift up}{ctrl up}
 
-;Open find in everyware
-#space::#q
+; Home and End with ctrl
+^Left::Send {Home}
+^Right::Send {End}
+^+Left::Send {shift down}{Home}}{shift up}
+^+Right::Send {shift down}{End}}{shift up}
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
 ; --------------------------------------------------------------
+
+; Map Alt + 5 to ~
+<^>!5::SendInput {~}
+
+; ----------- inerithed from the original document ----------
 
 ; Map Alt + L to @
 !l::SendInput {@}
@@ -121,9 +120,6 @@ LWin::^
 
 ; Map Alt + o to ø
 !o::SendInput {ø}
-
-; Map Alt + 5 to [
-!5::SendInput {[}
 
 ; Map Alt + 6 to ]
 !6::SendInput {]}
@@ -156,6 +152,32 @@ LWin::^
 !n::SendInput {~}
 
 ; --------------------------------------------------------------
+; media/function keys all mapped to the right option key
+; --------------------------------------------------------------
+
+;RAlt & F7::SendInput {Media_Prev}
+;RAlt & F8::SendInput {Media_Play_Pause}
+;RAlt & F9::SendInput {Media_Next}
+;F10::SendInput {Volume_Mute}
+;F11::SendInput {Volume_Down}
+;F12::SendInput {Volume_Up}
+
+; swap left command/windows key with left alt
+;LWin::LAlt
+;LAlt::LWin ; add a semicolon in front of this line if you want to disable the windows key
+
+; Eject Key
+;F20::SendInput {Insert}
+
+; F13-15, standard windows mapping
+;F13::SendInput {PrintScreen}
+;F14::SendInput {ScrollLock}
+;F15::SendInput {Pause}
+
+;F16-19 custom app launchers, see http://www.autohotkey.com/docs/Tutorial.htm for usage info
+;F16::Run http://google.com
+
+; --------------------------------------------------------------
 ; Application specific
 ; --------------------------------------------------------------
 
@@ -169,4 +191,3 @@ LWin::^
 #!u::Send ^u
 
 #IfWinActive
-
