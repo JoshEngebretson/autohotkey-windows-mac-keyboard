@@ -32,10 +32,13 @@ Lwin & Tab::AltTab
 #m::WinMinimize,a
 
 ;Disable Left Windows key (in cases when only the windows key is pressed without any letter (e.g. c))
-LWin::^
+LWin::Send ^
 
 ;Open Windows find in everywhere
 #space::#q
+
+;Print screen
+#+3::SendInput {PrintScreen}
 
 
 ; Make Ctrl + S (and others) works with cmd key
@@ -95,10 +98,10 @@ LWin::^
 <!+Right::Send {ctrl down}{shift down}{Right}{shift up}{ctrl up}
 
 ; Home and End with ctrl
-^Left::Send {Home}
-^Right::Send {End}
-^+Left::Send {shift down}{Home}}{shift up}
-^+Right::Send {shift down}{End}}{shift up}
+#Left::Send {Home}
+#Right::Send {End}
+#+Left::Send {shift down}{Home}}{shift up}
+#+Right::Send {shift down}{End}}{shift up}
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
