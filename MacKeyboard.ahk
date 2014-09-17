@@ -39,6 +39,17 @@ F13::Send {PrintScreen}
 ; Command + Letter -> Ctrl + Letter
 ; --------------------------------------------------------------
 
+Lwin & 1::Send {ctrl down}{1}{ctrl up}
+Lwin & 2::Send {ctrl down}{2}{ctrl up}
+Lwin & 3::Send {ctrl down}{3}{ctrl up}
+Lwin & 4::Send {ctrl down}{4}{ctrl up}
+Lwin & 5::Send {ctrl down}{5}{ctrl up}
+Lwin & 6::Send {ctrl down}{6}{ctrl up}
+Lwin & 7::Send {ctrl down}{7}{ctrl up}
+Lwin & 8::Send {ctrl down}{8}{ctrl up}
+Lwin & 9::Send {ctrl down}{9}{ctrl up}
+Lwin & 0::Send {ctrl down}{0}{ctrl up}
+
 Lwin & a::Send {ctrl down}{a}{ctrl up}
 Lwin & b::Send {ctrl down}{b}{ctrl up}
 Lwin & c::Send {ctrl down}{c}{ctrl up}
@@ -188,5 +199,8 @@ Lwin & Right::Send {End}
 
 ; Show source code with cmd + alt + u
 #!u::Send ^u
+
+; Command+click to Ctrl+click
+#LButton::Send {ctrl down}{LButton}{ctrl up}
 
 #IfWinActive
