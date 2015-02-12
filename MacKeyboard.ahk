@@ -35,6 +35,9 @@ Lwin & Tab::AltTab
 #+3::Send {PrintScreen}
 F13::Send {PrintScreen}
 
+; Command+click to Ctrl+click
+#LButton::Send {ctrl down}{LButton}{ctrl up}
+
 ; --------------------------------------------------------------
 ; Command + Letter -> Ctrl + Letter
 ; --------------------------------------------------------------
@@ -117,114 +120,42 @@ Lwin & NumpadAdd::Send {ctrl down}{+}{ctrl up}
 Lwin & NumpadSub::Send {ctrl down}{-}{ctrl up}
 
 #If GetKeyState("Lwin", "P")
-	Shift & 1::
-		Send {ctrl down}{shift down}{1}{shift up}{ctrl up}
-	Return
-	Shift & 2::
-		Send {ctrl down}{shift down}{2}{shift up}{ctrl up}
-	Return
-	Shift & 3::
-		Send {ctrl down}{shift down}{3}{shift up}{ctrl up}
-	Return
-	Shift & 4::
-		Send {ctrl down}{shift down}{4}{shift up}{ctrl up}
-	Return
-	Shift & 5::
-		Send {ctrl down}{shift down}{5}{shift up}{ctrl up}
-	Return
-	Shift & 6::
-		Send {ctrl down}{shift down}{6}{shift up}{ctrl up}
-	Return
-	Shift & 7::
-		Send {ctrl down}{shift down}{7}{shift up}{ctrl up}
-	Return
-	Shift & 8::
-		Send {ctrl down}{shift down}{8}{shift up}{ctrl up}
-	Return
-	Shift & 9::
-		Send {ctrl down}{shift down}{9}{shift up}{ctrl up}
-	Return
-	Shift & 0::
-		Send {ctrl down}{shift down}{0}{shift up}{ctrl up}
-	Return
-	Shift & a::
-		Send {ctrl down}{shift down}{a}{shift up}{ctrl up}
-	Return
-	Shift & b::
-		Send {ctrl down}{shift down}{b}{shift up}{ctrl up}
-	Return
-	Shift & c::
-		Send {ctrl down}{shift down}{c}{shift up}{ctrl up}
-	Return
-	Shift & d::
-		Send {ctrl down}{shift down}{d}{shift up}{ctrl up}
-	Return
-	Shift & e::
-		Send {ctrl down}{shift down}{e}{shift up}{ctrl up}
-	Return
-	Shift & f::
-		Send {ctrl down}{shift down}{f}{shift up}{ctrl up}
-	Return
-	Shift & g::
-		Send {ctrl down}{shift down}{g}{shift up}{ctrl up}
-	Return
-	Shift & h::
-		Send {ctrl down}{shift down}{h}{shift up}{ctrl up}
-	Return
-	Shift & i::
-		Send {ctrl down}{shift down}{i}{shift up}{ctrl up}
-	Return
-	Shift & j::
-		Send {ctrl down}{shift down}{j}{shift up}{ctrl up}
-	Return
-	Shift & k::
-		Send {ctrl down}{shift down}{k}{shift up}{ctrl up}
-	Return
-	Shift & l::
-		Send {ctrl down}{shift down}{l}{shift up}{ctrl up}
-	Return
-	Shift & m::
-		Send {ctrl down}{shift down}{m}{shift up}{ctrl up}
-	Return
-	Shift & n::
-		Send {ctrl down}{shift down}{n}{shift up}{ctrl up}
-	Return
-	Shift & o::
-		Send {ctrl down}{shift down}{o}{shift up}{ctrl up}
-	Return
-	Shift & p::
-		Send {ctrl down}{shift down}{p}{shift up}{ctrl up}
-	Return
-	Shift & q::
-		Send {ctrl down}{shift down}{q}{shift up}{ctrl up}
-	Return
-	Shift & r::
-		Send {ctrl down}{shift down}{r}{shift up}{ctrl up}
-	Return
-	Shift & s::
-		Send {ctrl down}{shift down}{s}{shift up}{ctrl up}
-	Return
-	Shift & t::
-		Send {ctrl down}{shift down}{t}{shift up}{ctrl up}
-	Return
-	Shift & u::
-		Send {ctrl down}{shift down}{u}{shift up}{ctrl up}
-	Return
-	Shift & v::
-		Send {ctrl down}{shift down}{v}{shift up}{ctrl up}
-	Return
-	Shift & w::
-		Send {ctrl down}{shift down}{w}{shift up}{ctrl up}
-	Return
-	Shift & x::
-		Send {ctrl down}{shift down}{x}{shift up}{ctrl up}
-	Return
-	Shift & y::
-		Send {ctrl down}{shift down}{y}{shift up}{ctrl up}
-	Return
-	Shift & z::
-		Send {ctrl down}{shift down}{z}{shift up}{ctrl up}
-	Return
+	Shift & 1::Send {ctrl down}{shift down}{1}{shift up}{ctrl up}
+	Shift & 2::Send {ctrl down}{shift down}{2}{shift up}{ctrl up}
+	Shift & 3::Send {ctrl down}{shift down}{3}{shift up}{ctrl up}
+	Shift & 4::Send {ctrl down}{shift down}{4}{shift up}{ctrl up}
+	Shift & 5::Send {ctrl down}{shift down}{5}{shift up}{ctrl up}
+	Shift & 6::Send {ctrl down}{shift down}{6}{shift up}{ctrl up}
+	Shift & 7::Send {ctrl down}{shift down}{7}{shift up}{ctrl up}
+	Shift & 8::Send {ctrl down}{shift down}{8}{shift up}{ctrl up}
+	Shift & 9::Send {ctrl down}{shift down}{9}{shift up}{ctrl up}
+	Shift & 0::Send {ctrl down}{shift down}{0}{shift up}{ctrl up}
+	Shift & a::Send {ctrl down}{shift down}{a}{shift up}{ctrl up}
+	Shift & b::Send {ctrl down}{shift down}{b}{shift up}{ctrl up}
+	Shift & c::Send {ctrl down}{shift down}{c}{shift up}{ctrl up}
+	Shift & d::Send {ctrl down}{shift down}{d}{shift up}{ctrl up}
+	Shift & e::Send {ctrl down}{shift down}{e}{shift up}{ctrl up}
+	Shift & f::Send {ctrl down}{shift down}{f}{shift up}{ctrl up}
+	Shift & g::Send {ctrl down}{shift down}{g}{shift up}{ctrl up}
+	Shift & h::Send {ctrl down}{shift down}{h}{shift up}{ctrl up}
+	Shift & i::Send {ctrl down}{shift down}{i}{shift up}{ctrl up}
+	Shift & j::Send {ctrl down}{shift down}{j}{shift up}{ctrl up}
+	Shift & k::Send {ctrl down}{shift down}{k}{shift up}{ctrl up}
+	Shift & l::Send {ctrl down}{shift down}{l}{shift up}{ctrl up}
+	Shift & m::Send {ctrl down}{shift down}{m}{shift up}{ctrl up}
+	Shift & n::Send {ctrl down}{shift down}{n}{shift up}{ctrl up}
+	Shift & o::Send {ctrl down}{shift down}{o}{shift up}{ctrl up}
+	Shift & p::Send {ctrl down}{shift down}{p}{shift up}{ctrl up}
+	Shift & q::Send {ctrl down}{shift down}{q}{shift up}{ctrl up}
+	Shift & r::Send {ctrl down}{shift down}{r}{shift up}{ctrl up}
+	Shift & s::Send {ctrl down}{shift down}{s}{shift up}{ctrl up}
+	Shift & t::Send {ctrl down}{shift down}{t}{shift up}{ctrl up}
+	Shift & u::Send {ctrl down}{shift down}{u}{shift up}{ctrl up}
+	Shift & v::Send {ctrl down}{shift down}{v}{shift up}{ctrl up}
+	Shift & w::Send {ctrl down}{shift down}{w}{shift up}{ctrl up}
+	Shift & x::Send {ctrl down}{shift down}{x}{shift up}{ctrl up}
+	Shift & y::Send {ctrl down}{shift down}{y}{shift up}{ctrl up}
+	Shift & z::Send {ctrl down}{shift down}{z}{shift up}{ctrl up}
 #If
 
 ; --------------------------------------------------------------
@@ -240,20 +171,28 @@ Lwin & NumpadSub::Send {ctrl down}{-}{ctrl up}
 ; Skip words
 <!Left::Send {ctrl down}{Left}{ctrl up}
 <!Right::Send {ctrl down}{Right}{ctrl up}
-<!+Left::Send {ctrl down}{shift down}{Left}{shift up}{ctrl up}
-<!+Right::Send {ctrl down}{shift down}{Right}{shift up}{ctrl up}
+
+; Select skipping words
+#If GetKeyState("Alt", "P") And Not GetKeyState("Ctrl", "P")
+	Shift & Left::
+		Send {shift down}{ctrl down}{Left}{ctrl up}{shift up}
+	Return
+
+	Shift & Right::
+		Send {shift down}{ctrl down}{Right}{ctrl up}{shift up}
+	Return
+#If
 
 ; Home and End with ctrl (also using shift)
 Lwin & Left::Send {Home}
 Lwin & Right::Send {End}
-
-#If GetKeyState("Lwin", "P")
-	Shift & Left::
-		Send {shift down}{Home}}{shift up}
+#If GetKeyState("Shift", "P")
+	Lwin & Left::
+		Send {shift down}{Home}{shift up}
 	Return
 	
-	Shift & Right::
-		Send {shift down}{End}}{shift up}
+	Lwin & Right::
+		Send {shift down}{End}{shift up}
 	Return	
 #If
 
@@ -264,75 +203,8 @@ Lwin & Right::Send {End}
 ; Map Alt + 5 to ~
 <^>!5::Send {~}
 
-; ----------- inerithed from the original document ----------
-
-; Map Alt + L to @
-!l::Send {@}
-
-; Map Alt + N to \
-+!7::Send {\}
-
-; Map Alt + N to ©
-!g::Send {©}
-
-; Map Alt + o to ø
-!o::Send {ø}
-
-; Map Alt + 6 to ]
-!6::Send {]}
-
-; Map Alt + E to €
-!e::Send {€}
-
-; Map Alt + - to –
-!-::Send {–}
-
-; Map Alt + 8 to {
-!8::Send {{}
-
-; Map Alt + 9 to }
-!9::Send {}}
-
-; Map Alt + - to ±
-!+::Send {±}
-
-; Map Alt + R to ®
-!r::Send {®}
-
-; Map Alt + N to |
-!7::Send {|}
-
-; Map Alt + W to ∑
-!w::Send {∑}
-
-; Map Alt + N to ~
-!n::Send {~}
-
-; --------------------------------------------------------------
-; media/function keys all mapped to the right option key
-; --------------------------------------------------------------
-
-;RAlt & F7::Send {Media_Prev}
-;RAlt & F8::Send {Media_Play_Pause}
-;RAlt & F9::Send {Media_Next}
-;F10::Send {Volume_Mute}
-;F11::Send {Volume_Down}
-;F12::Send {Volume_Up}
-
-; swap left command/windows key with left alt
-;LWin::LAlt
-;LAlt::LWin ; add a semicolon in front of this line if you want to disable the windows key
-
-; Eject Key
-;F20::Send {Insert}
-
-; F13-15, standard windows mapping
-;F13::Send {PrintScreen}
-;F14::Send {ScrollLock}
-;F15::Send {Pause}
-
-;F16-19 custom app launchers, see http://www.autohotkey.com/docs/Tutorial.htm for usage info
-;F16::Run http://google.com
+; Map Alt + 9 to `
+<^>!9::Send {`}
 
 ; --------------------------------------------------------------
 ; Application specific
@@ -341,13 +213,6 @@ Lwin & Right::Send {End}
 ; Google Chrome
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 
-; Show Web Developer Tools with cmd + alt + i
-#!i::Send {F12}
-
-; Show source code with cmd + alt + u
-#!u::Send ^u
-
-; Command+click to Ctrl+click
-#LButton::Send {ctrl down}{LButton}{ctrl up}
+;...
 
 #IfWinActive
