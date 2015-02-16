@@ -163,7 +163,7 @@ Lwin & NumpadSub::Send {ctrl down}{-}{ctrl up}
 ; --------------------------------------------------------------
 
 ; Cmd-backspace to delete the left part of a line
-#BS::Send {LShift down}{Home}{LShift Up}{Del}
+Lwin & BS::Send {LShift down}{Home}{LShift Up}{Del}
 
 ; Alt-delete to delete the previous word
 !BS::Send {LShift down}{LCtrl down}{Left}{LShift Up}{Lctrl up}{Del}
@@ -210,9 +210,10 @@ Lwin & Right::Send {End}
 ; Application specific
 ; --------------------------------------------------------------
 
-; Google Chrome
-#IfWinActive, ahk_class Chrome_WidgetWin_1
+; Explorer
+#If WinActive("ahk_class Progman") || WinActive("ahk_class CabinetWClass")
 
-;...
+; Cmd-backspace to delete
+#BS::Send {Del}
 
-#IfWinActive
+#If
