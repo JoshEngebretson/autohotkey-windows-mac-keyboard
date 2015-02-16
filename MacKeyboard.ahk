@@ -216,4 +216,10 @@ Lwin & Right::Send {End}
 ; Cmd-backspace to delete
 #BS::Send {Del}
 
+; Cmd-up to backslash
+#Up::Send {BS}
+
+; Cmd-down to enter
+#Down::Send {Enter}
+
 #If
