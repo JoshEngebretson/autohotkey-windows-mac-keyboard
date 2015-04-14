@@ -204,7 +204,7 @@ Lwin & Right::Send {End}
 <^>!5::Send {~}
 
 ; Map Alt + 9 to `
-<^>!9::Send {`}
+<^>!9::Send {``}
 
 ; --------------------------------------------------------------
 ; Application specific
