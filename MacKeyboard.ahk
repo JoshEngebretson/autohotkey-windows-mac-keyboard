@@ -38,6 +38,9 @@ F13::Send {PrintScreen}
 ; Command+click to Ctrl+click
 #LButton::Send {ctrl down}{LButton}{ctrl up}
 
+; Right ALT to Right click in the cursor position (i.e. menu key)
+RAlt::Appskey
+
 ; --------------------------------------------------------------
 ; Command + Letter -> Ctrl + Letter
 ; --------------------------------------------------------------
@@ -85,8 +88,11 @@ $^j::return
 Lwin & j::Send {ctrl down}{j}{ctrl up}
 $^k::return
 Lwin & k::Send {ctrl down}{k}{ctrl up}
-;$^l::return
+
+; doesn't work on Windows, has a different behavior
+$^l::return
 Lwin & l::Send {ctrl down}{l}{ctrl up}
+
 $^m::return
 Lwin & m::Send {ctrl down}{m}{ctrl up}
 $^n::return
@@ -195,6 +201,10 @@ Lwin & Right::Send {End}
 		Send {shift down}{End}{shift up}
 	Return	
 #If
+
+; Home document and end document
+Lwin & Home::Send {ctrl down}{Home}{ctrl up}
+Lwin & End::Send {ctrl down}{End}{ctrl up}
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
